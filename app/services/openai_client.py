@@ -1,11 +1,12 @@
 from openai import OpenAI
 
-from app.config import OPENAI_API_KEY, OPENAI_MODEL, SYSTEM_PROMPT
+from app.config import OPENAI_API_KEY, OPENAI_MODEL, SYSTEM_PROMPT, OPENAI_BASE_URL
 
 
 class OpenAIService:
     def __init__(self) -> None:
-        self._client = OpenAI(api_key=OPENAI_API_KEY)
+        self._client = OpenAI(api_key=OPENAI_API_KEY,base_url=OPENAI_BASE_URL)
+        
 
     def generate_reply(self, user_text: str) -> str:
         response = self._client.chat.completions.create(

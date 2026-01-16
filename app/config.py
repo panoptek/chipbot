@@ -15,6 +15,7 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.voidai.app/v1")
 
 OWNER_USER_ID = int(os.getenv("OWNER_USER_ID", "0"))
 DAILY_USER_LIMIT = int(os.getenv("DAILY_USER_LIMIT", "30"))
