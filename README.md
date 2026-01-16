@@ -16,16 +16,22 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Создайте переменные окружения:
+Создайте `.env` на основе примера:
 
 ```bash
-export TELEGRAM_BOT_TOKEN="..."
-export OPENAI_API_KEY="..."
-export BOT_NAME="Чип"
-export BOT_ALIASES="chip,чип"
-export OWNER_USER_ID="123456789"
-export DAILY_USER_LIMIT="30"
-export OPENAI_MODEL="gpt-4o-mini"
+cp .env.example .env
+```
+
+Заполните переменные в `.env`:
+
+```env
+TELEGRAM_BOT_TOKEN="..."
+OPENAI_API_KEY="..."
+BOT_NAME="Чип"
+BOT_ALIASES="chip,чип"
+OWNER_USER_ID="123456789"
+DAILY_USER_LIMIT="30"
+OPENAI_MODEL="gpt-4o-mini"
 ```
 
 Запуск:
